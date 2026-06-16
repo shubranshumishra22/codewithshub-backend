@@ -143,11 +143,16 @@ export const markQuestionSolved = async (req, res) => {
 export const unmarkQuestionSolved = async (req, res) => {
   const { questionId } = req.params;
 
-  const { error: progressError } = await req.supabase
+  const { data: progress, error: progressError } = await req.supabase
     .from('user_progress')
-    .delete()
+    .update({
+      is_solved: false,
+      solved_at: null,
+    })
     .eq('user_id', req.user.id)
-    .eq('question_id', questionId);
+    .eq('question_id', questionId)
+    .select('id, user_id, question_id, is_solved, solved_at, notes')
+    .maybeSingle();
 
   throwIfSupabaseError(progressError);
 
@@ -159,5 +164,5 @@ export const unmarkQuestionSolved = async (req, res) => {
 
   throwIfSupabaseError(revisionError);
 
-  res.status(200).json({ message: 'Question marked as unsolved' });
+  res.status(200).json({ progress, message: 'Question marked as unsolved' });
 };
