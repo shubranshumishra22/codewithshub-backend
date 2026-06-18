@@ -3,6 +3,7 @@ import {
   completeRevision,
   getTodayRevision,
   getUpcomingRevision,
+  syncQuestionRevision,
   uncompleteRevision,
 } from '../controllers/revisionController.js';
 
@@ -12,5 +13,6 @@ router.get('/today', getTodayRevision);
 router.get('/upcoming', getUpcomingRevision);
 router.post('/complete', completeRevision);
 router.post('/uncomplete', uncompleteRevision);
+router.post('/sync-question', syncQuestionRevision);
 
 export default router;
