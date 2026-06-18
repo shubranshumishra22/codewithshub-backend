@@ -79,3 +79,30 @@ export const completeRevision = async (req, res) => {
 
   res.status(200).json({ revision: data });
 };
+
+export const uncompleteRevision = async (req, res) => {
+  const { revision_schedule_id } = req.body;
+
+  if (!revision_schedule_id) {
+    throw badRequest('revision_schedule_id is required');
+  }
+
+  const { data, error } = await req.supabase
+    .from('revision_schedule')
+    .update({
+      is_completed: false,
+      completed_at: null,
+    })
+    .eq('id', revision_schedule_id)
+    .eq('user_id', req.user.id)
+    .select('id, question_id, revision_day, due_date, is_completed, completed_at')
+    .maybeSingle();
+
+  throwIfSupabaseError(error);
+
+  if (!data) {
+    throw notFoundError('Revision schedule not found');
+  }
+
+  res.status(200).json({ revision: data });
+};
