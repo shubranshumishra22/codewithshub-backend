@@ -2,6 +2,10 @@ import { addDaysDateString } from '../utils/date.js';
 import { badRequest, notFoundError } from '../utils/httpError.js';
 import { throwIfSupabaseError } from '../utils/supabaseError.js';
 import { updateStreakOnActivity } from './userController.js';
+import crypto from 'crypto';
+import { supabaseAdmin } from '../config/supabase.js';
+import { translatePseudocode, generateTestCases } from '../utils/logicCheck.js';
+import { executeInSandbox } from '../utils/sandbox.js';
 
 const getSheetQuestionIds = async (client, sheetId) => {
   const { data: topics, error: topicsError } = await client
@@ -168,4 +172,159 @@ export const unmarkQuestionSolved = async (req, res) => {
   throwIfSupabaseError(revisionError);
 
   res.status(200).json({ progress, message: 'Question marked as unsolved' });
+};
+
+export const checkLogic = async (req, res) => {
+  const { questionId, pseudocode } = req.body;
+
+  if (!questionId || !pseudocode) {
+    throw badRequest('questionId and pseudocode are required');
+  }
+
+  // 1. Check if the question exists
+  const { data: question, error: questionError } = await req.supabase
+    .from('questions')
+    .select('id, title, difficulty')
+    .eq('id', questionId)
+    .maybeSingle();
+
+  throwIfSupabaseError(questionError);
+  if (!question) {
+    throw notFoundError('Question not found');
+  }
+
+  // 2. Compute pseudocode hash
+  const pseudocodeHash = crypto.createHash('sha256').update(pseudocode.trim()).digest('hex');
+
+  // 3. Check cache
+  const { data: cached, error: cacheError } = await req.supabase
+    .from('logic_check_cache')
+    .select('id, translated_code, assumptions, results, overall_passed')
+    .eq('user_id', req.user.id)
+    .eq('question_id', questionId)
+    .eq('pseudocode_hash', pseudocodeHash)
+    .maybeSingle();
+
+  if (cached) {
+    console.log('Serving logic check from cache...');
+    return res.status(200).json({
+      problemId: questionId,
+      generatedCode: cached.translated_code,
+      language: 'python',
+      assumptions: cached.assumptions,
+      results: cached.results,
+      overallPassed: cached.overall_passed,
+    });
+  }
+
+  // 4. Retrieve or generate test cases
+  const dbClient = supabaseAdmin || req.supabase;
+  let { data: tcRow, error: tcError } = await dbClient
+    .from('question_test_cases')
+    .select('test_cases')
+    .eq('question_id', questionId)
+    .maybeSingle();
+
+  throwIfSupabaseError(tcError);
+
+  let testCases = [];
+  if (tcRow && Array.isArray(tcRow.test_cases) && tcRow.test_cases.length > 0) {
+    testCases = tcRow.test_cases;
+  } else {
+    // Generate new test cases using LLM
+    testCases = await generateTestCases(question.title, question.difficulty);
+    // Save to database
+    const { error: saveTcError } = await dbClient
+      .from('question_test_cases')
+      .upsert({
+        question_id: questionId,
+        test_cases: testCases,
+      }, { onConflict: 'question_id' });
+    
+    if (saveTcError) {
+      console.error('Error saving generated test cases:', saveTcError);
+    }
+  }
+
+  // 5. Translate pseudocode to Python code
+  let translationResult;
+  try {
+    translationResult = await translatePseudocode(question.title, question.difficulty, pseudocode);
+  } catch (err) {
+    return res.status(503).json({
+      error: 'AI service is busy, try again',
+      details: err.message,
+    });
+  }
+
+  if (translationResult.untranslatable) {
+    return res.status(200).json({
+      problemId: questionId,
+      untranslatable: true,
+      generatedCode: '',
+      language: 'python',
+      assumptions: [],
+      results: [],
+      overallPassed: false,
+    });
+  }
+
+  // 6. Extract function name and run sandbox
+  const match = pseudocode.match(/(?:function|def)\s+([a-zA-Z0-9_]+)/);
+  const funcName = match ? match[1] : 'solution';
+
+  const execution = await executeInSandbox(translationResult.code, funcName, testCases);
+
+  if (execution.error) {
+    // Execution sandbox crashed or compile error
+    // Save to cache as failed
+    const finalResults = [{
+      testCaseId: '1',
+      passed: false,
+      input: 'Compile/Syntax Check',
+      expected: 'Successful Run',
+      actual: execution.error,
+    }];
+
+    await req.supabase.from('logic_check_cache').insert({
+      user_id: req.user.id,
+      question_id: questionId,
+      pseudocode_hash: pseudocodeHash,
+      pseudocode,
+      translated_code: translationResult.code,
+      assumptions: translationResult.assumptions || [],
+      results: finalResults,
+      overall_passed: false,
+    });
+
+    return res.status(200).json({
+      problemId: questionId,
+      generatedCode: translationResult.code,
+      language: 'python',
+      assumptions: translationResult.assumptions || [],
+      results: finalResults,
+      overallPassed: false,
+    });
+  }
+
+  // 7. Save to cache
+  await req.supabase.from('logic_check_cache').insert({
+    user_id: req.user.id,
+    question_id: questionId,
+    pseudocode_hash: pseudocodeHash,
+    pseudocode,
+    translated_code: translationResult.code,
+    assumptions: translationResult.assumptions || [],
+    results: execution.results,
+    overall_passed: execution.overallPassed,
+  });
+
+  res.status(200).json({
+    problemId: questionId,
+    generatedCode: translationResult.code,
+    language: 'python',
+    assumptions: translationResult.assumptions || [],
+    results: execution.results,
+    overallPassed: execution.overallPassed,
+  });
 };
