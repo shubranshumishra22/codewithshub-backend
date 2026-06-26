@@ -1,6 +1,7 @@
 import { addDaysDateString } from '../utils/date.js';
 import { badRequest, notFoundError } from '../utils/httpError.js';
 import { throwIfSupabaseError } from '../utils/supabaseError.js';
+import { updateStreakOnActivity } from './userController.js';
 
 const getSheetQuestionIds = async (client, sheetId) => {
   const { data: topics, error: topicsError } = await client
@@ -133,6 +134,8 @@ export const markQuestionSolved = async (req, res) => {
     throwIfSupabaseError(error);
     revisionSchedule = data;
   }
+
+  await updateStreakOnActivity(req.supabase, req.user.id);
 
   res.status(201).json({
     progress,

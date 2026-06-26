@@ -1,6 +1,7 @@
 import { todayDateString, addDaysDateString } from '../utils/date.js';
 import { badRequest, notFoundError } from '../utils/httpError.js';
 import { throwIfSupabaseError } from '../utils/supabaseError.js';
+import { updateStreakOnActivity } from './userController.js';
 
 const getRevisionRows = async (client, userId, fromDate, toDate = fromDate) => {
   const { data: schedules, error: scheduleError } = await client
@@ -76,6 +77,8 @@ export const completeRevision = async (req, res) => {
   if (!data) {
     throw notFoundError('Revision schedule not found');
   }
+
+  await updateStreakOnActivity(req.supabase, req.user.id);
 
   res.status(200).json({ revision: data });
 };
