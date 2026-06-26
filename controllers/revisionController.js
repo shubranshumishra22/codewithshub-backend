@@ -116,16 +116,11 @@ export const syncQuestionRevision = async (req, res) => {
 
   const { data: existing, error: checkError } = await req.supabase
     .from('revision_schedule')
-    .select('id')
+    .select('revision_day')
     .eq('user_id', req.user.id)
-    .eq('question_id', question_id)
-    .limit(1);
+    .eq('question_id', question_id);
 
   throwIfSupabaseError(checkError);
-
-  if (existing && existing.length > 0) {
-    return res.status(200).json({ created: false, message: 'Revision schedule already exists' });
-  }
 
   const { data: profile, error: profileError } = await req.supabase
     .from('profiles')
@@ -135,7 +130,14 @@ export const syncQuestionRevision = async (req, res) => {
 
   throwIfSupabaseError(profileError);
 
-  const revisionRows = (profile.revision_intervals || []).map((revisionDay) => ({
+  const existingDays = new Set((existing || []).map((r) => r.revision_day));
+  const missingDays = (profile.revision_intervals || []).filter((day) => !existingDays.has(day));
+
+  if (missingDays.length === 0) {
+    return res.status(200).json({ created: false, message: 'All revision schedules already exist' });
+  }
+
+  const revisionRows = missingDays.map((revisionDay) => ({
     user_id: req.user.id,
     question_id,
     revision_day: revisionDay,
@@ -144,13 +146,9 @@ export const syncQuestionRevision = async (req, res) => {
     completed_at: null,
   }));
 
-  if (revisionRows.length === 0) {
-    return res.status(200).json({ created: false, message: 'No revision intervals configured' });
-  }
-
   const { data, error } = await req.supabase
     .from('revision_schedule')
-    .upsert(revisionRows, { onConflict: 'user_id,question_id,revision_day' })
+    .insert(revisionRows)
     .select('id, question_id, revision_day, due_date, is_completed, completed_at');
 
   throwIfSupabaseError(error);
