@@ -84,7 +84,7 @@ export const getTopicsWithQuestions = async (req, res) => {
   if (topicIds.length > 0) {
     const { data, error } = await client
       .from('questions')
-      .select('id, topic_id, title, difficulty, leetcode_url, created_at, order_index')
+      .select('id, topic_id, title, difficulty, leetcode_url, video_url, created_at, order_index')
       .in('topic_id', topicIds)
       .order('order_index', { ascending: true });
 
@@ -113,7 +113,7 @@ export const getQuestionBySlug = async (req, res) => {
 
   const { data: questions, error } = await client
     .from('questions')
-    .select('id, title, difficulty, leetcode_url, topic_id, topics (sheet_id)');
+    .select('id, title, difficulty, leetcode_url, video_url, topic_id, topics (sheet_id)');
 
   throwIfSupabaseError(error);
 
