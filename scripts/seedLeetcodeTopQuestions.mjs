@@ -1,5 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 import { env } from '../config/env.js';
+import fs from 'fs';
+import path from 'path';
 
 const supabaseOptions = {
   auth: {
@@ -8,80 +10,72 @@ const supabaseOptions = {
   },
 };
 
-const LEETCODE_TOP_DATA = [
-  {
-    topicName: 'Arrays & Strings',
-    questions: [
-      { title: 'Two Sum', difficulty: 'easy', leetcode_url: 'https://leetcode.com/problems/two-sum/' },
-      { title: 'Longest Substring Without Repeating Characters', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/longest-substring-without-repeating-characters/' },
-      { title: 'String to Integer (atoi)', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/string-to-integer-atoi/' },
-      { title: 'Container With Most Water', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/container-with-most-water/' },
-      { title: '3Sum', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/3sum/' },
-      { title: 'Letter Combinations of a Phone Number', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/letter-combinations-of-a-phone-number/' },
-      { title: 'Valid Parentheses', difficulty: 'easy', leetcode_url: 'https://leetcode.com/problems/valid-parentheses/' },
-      { title: 'Merge Two Sorted Lists', difficulty: 'easy', leetcode_url: 'https://leetcode.com/problems/merge-two-sorted-lists/' },
-      { title: 'Generate Parentheses', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/generate-parentheses/' },
-      { title: 'Merge k Sorted Lists', difficulty: 'hard', leetcode_url: 'https://leetcode.com/problems/merge-k-sorted-lists/' }
-    ]
-  },
-  {
-    topicName: 'Searching & Sorting',
-    questions: [
-      { title: 'Search in Rotated Sorted Array', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/search-in-rotated-sorted-array/' },
-      { title: 'Find First and Last Position of Element in Sorted Array', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/' },
-      { title: 'Search Insert Position', difficulty: 'easy', leetcode_url: 'https://leetcode.com/problems/search-insert-position/' },
-      { title: 'First Missing Positive', difficulty: 'hard', leetcode_url: 'https://leetcode.com/problems/first-missing-positive/' }
-    ]
-  },
-  {
-    topicName: 'Matrix & Multi-Dimensional Arrays',
-    questions: [
-      { title: 'Rotate Image', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/rotate-image/' },
-      { title: 'Group Anagrams', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/group-anagrams/' },
-      { title: 'Maximum Subarray', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/maximum-subarray/' },
-      { title: 'Spiral Matrix', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/spiral-matrix/' }
-    ]
-  },
-  {
-    topicName: 'Linked Lists',
-    questions: [
-      { title: 'Reverse Linked List', difficulty: 'easy', leetcode_url: 'https://leetcode.com/problems/reverse-linked-list/' },
-      { title: 'Linked List Cycle', difficulty: 'easy', leetcode_url: 'https://leetcode.com/problems/linked-list-cycle/' },
-      { title: 'Copy List with Random Pointer', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/copy-list-with-random-pointer/' }
-    ]
-  },
-  {
-    topicName: 'Trees & Graphs',
-    questions: [
-      { title: 'Binary Tree Inorder Traversal', difficulty: 'easy', leetcode_url: 'https://leetcode.com/problems/binary-tree-inorder-traversal/' },
-      { title: 'Validate Binary Search Tree', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/validate-binary-search-tree/' },
-      { title: 'Symmetric Tree', difficulty: 'easy', leetcode_url: 'https://leetcode.com/problems/symmetric-tree/' },
-      { title: 'Binary Tree Level Order Traversal', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/binary-tree-level-order-traversal/' },
-      { title: 'Maximum Depth of Binary Tree', difficulty: 'easy', leetcode_url: 'https://leetcode.com/problems/maximum-depth-of-binary-tree/' },
-      { title: 'Construct Binary Tree from Preorder and Inorder Traversal', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/' }
-    ]
-  },
-  {
-    topicName: 'Dynamic Programming & Greedy',
-    questions: [
-      { title: 'Climbing Stairs', difficulty: 'easy', leetcode_url: 'https://leetcode.com/problems/climbing-stairs/' },
-      { title: 'Edit Distance', difficulty: 'hard', leetcode_url: 'https://leetcode.com/problems/edit-distance/' },
-      { title: 'Jump Game', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/jump-game/' },
-      { title: 'Unique Paths', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/unique-paths/' },
-      { title: 'Coin Change', difficulty: 'medium', leetcode_url: 'https://leetcode.com/problems/coin-change/' }
-    ]
-  }
-];
-
 async function main() {
   if (!env.supabaseUrl || !env.supabaseServiceRoleKey) {
     throw new Error('Missing Supabase credentials (SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY).');
   }
 
+  const mdPath = path.resolve('scripts/leetcode_top_150.md');
+  if (!fs.existsSync(mdPath)) {
+    throw new Error(`Dataset not found at ${mdPath}. Run curl download first.`);
+  }
+
+  const content = fs.readFileSync(mdPath, 'utf8');
+  const rows = content.split('<tr>');
+  let currentTopic = 'Array / String';
+  const parsedQuestions = [];
+
+  for (let r of rows) {
+    if (r.includes('colspan="5"') || r.includes('colspan=5')) {
+      const topicMatch = r.match(/<strong>(.*?)<\/strong>/);
+      if (topicMatch) {
+        currentTopic = topicMatch[1].replace(/<[^>]*>/g, '').trim();
+      }
+      continue;
+    }
+    if (r.includes('<td')) {
+      const tds = r.split('</td>');
+      if (tds.length >= 2) {
+        const firstTd = tds[0];
+        let title = '';
+        let url = null;
+        if (firstTd.includes('href=')) {
+          const urlMatch = firstTd.match(/href="([^"]+)"/);
+          if (urlMatch) url = urlMatch[1].trim();
+          const textMatch = firstTd.match(/>([^<]+)<\/a>/);
+          if (textMatch) {
+            title = textMatch[1].trim();
+          } else {
+            title = firstTd.replace(/<[^>]*>/g, '').trim();
+          }
+        } else {
+          title = firstTd.replace(/<[^>]*>/g, '').trim();
+        }
+        if (title.toLowerCase() === 'problem' || title.includes('Questions List') || title.includes('Id')) {
+          continue;
+        }
+        const secondTd = tds[1];
+        const diffText = secondTd.replace(/<[^>]*>/g, '').trim();
+        const diff = diffText.toLowerCase();
+        const difficulty = (diff === 'easy' || diff === 'medium' || diff === 'hard') ? diff : 'medium';
+        if (title.length > 0 && !title.startsWith('Id')) {
+          const cleanTitle = title.replace(/&amp;/g, '&').replace(/&#39;/g, "'").trim();
+          const finalUrl = url || 'https://leetcode.com/problems/' + cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '/';
+          parsedQuestions.push({
+            topic: currentTopic.replace(/&amp;/g, '&').replace(/&#39;/g, "'").trim(),
+            title: cleanTitle,
+            difficulty,
+            leetcode_url: finalUrl
+          });
+        }
+      }
+    }
+  }
+
   const seedClient = createClient(env.supabaseUrl, env.supabaseServiceRoleKey, supabaseOptions);
 
   const sheetName = 'LeetCode Top Interview Questions';
-  const sheetDescription = 'The most popular and frequently asked coding questions in technical interviews on LeetCode.';
+  const sheetDescription = 'The complete 150 popular and frequently asked coding questions in technical interviews on LeetCode.';
 
   // 1. Create or get Leetcode sheet
   const { data: existingSheets, error: sheetFetchError } = await seedClient
@@ -108,9 +102,14 @@ async function main() {
   console.log(`Using Sheet: ${sheet.name} (id: ${sheet.id})`);
 
   // 2. Prepare topics and questions list
-  const topicsToUpsert = LEETCODE_TOP_DATA.map((t, idx) => ({
+  const topicsMap = {};
+  parsedQuestions.forEach(q => {
+    topicsMap[q.topic] = true;
+  });
+  const topicsList = Object.keys(topicsMap);
+  const topicsToUpsert = topicsList.map((cat, idx) => ({
     sheet_id: sheet.id,
-    name: t.topicName,
+    name: cat,
     order_index: idx + 1,
   }));
 
@@ -129,21 +128,26 @@ async function main() {
     .eq('sheet_id', sheet.id);
 
   if (savedTopicsError) throw savedTopicsError;
-  const topicIdByOrder = new Map(savedTopics.map(t => [t.order_index, t.id]));
+  const topicIdByName = new Map(savedTopics.map(t => [t.name, t.id]));
 
   // 3. Prepare questions to upsert
   const questionsToUpsert = [];
-  LEETCODE_TOP_DATA.forEach((t, tIdx) => {
-    const topicId = topicIdByOrder.get(tIdx + 1);
-    t.questions.forEach((q, qIdx) => {
-      questionsToUpsert.push({
-        topic_id: topicId,
-        title: q.title,
-        difficulty: q.difficulty,
-        leetcode_url: q.leetcode_url,
-        video_url: null, // No standard video URL for Leetcode general questions
-        order_index: qIdx + 1,
-      });
+  const topicCounter = {};
+
+  parsedQuestions.forEach((q) => {
+    const topicId = topicIdByName.get(q.topic);
+    topicCounter[q.topic] = (topicCounter[q.topic] || 0) + 1;
+
+    // Search query for video explanation on YouTube
+    const video_url = `https://www.youtube.com/results?search_query=leetcode+${encodeURIComponent(q.title)}+explanation`;
+
+    questionsToUpsert.push({
+      topic_id: topicId,
+      title: q.title,
+      difficulty: q.difficulty,
+      leetcode_url: q.leetcode_url,
+      video_url,
+      order_index: topicCounter[q.topic],
     });
   });
 
@@ -153,7 +157,7 @@ async function main() {
     .upsert(questionsToUpsert, { onConflict: 'topic_id,order_index' });
 
   if (questionError) throw questionError;
-  console.log(`Seeded LeetCode Top Questions Sheet: ${LEETCODE_TOP_DATA.length} topics, ${questionsToUpsert.length} questions successfully.`);
+  console.log(`Successfully seeded ALL ${questionsToUpsert.length} Leetcode Top Interview questions!`);
 }
 
 main().catch(err => {
