@@ -72,7 +72,7 @@ export const getTopicsWithQuestions = async (req, res) => {
 
   const { data: topics, error: topicsError } = await client
     .from('topics')
-    .select('id, sheet_id, name, order_index')
+    .select('id, sheet_id, name, order_index, module, category')
     .eq('sheet_id', id)
     .order('order_index', { ascending: true });
 
