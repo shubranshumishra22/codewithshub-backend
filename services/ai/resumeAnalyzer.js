@@ -1,4 +1,6 @@
-import { generateChatCompletion } from './index.js';
+import { generateChatCompletion as nvidiaGenerate } from './nvidia.js';
+import { generateChatCompletion as openrouterGenerate } from './openrouter.js';
+import { generateChatCompletion as geminiGenerate } from './gemini.js';
 import { PROMPTS } from './resumePrompts.js';
 
 function safeJsonParse(text) {
@@ -16,12 +18,22 @@ function safeJsonParse(text) {
 export async function analyzeResume(resumeText, jobDescription) {
   const prompt1Text = PROMPTS.prompt1({ resumeText, jobDescription });
 
-  const analysisRaw = await generateChatCompletion({
-    modelKey: 'analysis',
-    messages: [{ role: 'user', content: prompt1Text }],
-    temperature: 0.2,
-    maxTokens: 2048,
-  });
+  let analysisRaw;
+  try {
+    analysisRaw = await nvidiaGenerate({
+      modelKey: 'analysis',
+      messages: [{ role: 'user', content: prompt1Text }],
+      temperature: 0.2,
+      maxTokens: 2048,
+    });
+  } catch (nvidiaErr) {
+    console.warn("Nvidia completely failed. Falling back to Gemini for Analysis step.", nvidiaErr.message);
+    analysisRaw = await geminiGenerate({
+      modelKey: 'analysis',
+      messages: [{ role: 'user', content: prompt1Text }],
+      temperature: 0.2,
+    });
+  }
 
   const analysis = safeJsonParse(analysisRaw) || {
     atsScore: 0,
@@ -43,12 +55,22 @@ export async function analyzeResume(resumeText, jobDescription) {
     redFlags: analysis.redFlags || [],
   });
 
-  const rewrittenResume = await generateChatCompletion({
-    modelKey: 'rewrite',
-    messages: [{ role: 'user', content: prompt2Text }],
-    temperature: 0.3,
-    maxTokens: 3072,
-  });
+  let rewrittenResume;
+  try {
+    rewrittenResume = await openrouterGenerate({
+      modelKey: 'rewrite',
+      messages: [{ role: 'user', content: prompt2Text }],
+      temperature: 0.3,
+      maxTokens: 3072,
+    });
+  } catch (openRouterErr) {
+    console.warn("OpenRouter completely failed (likely rate limited). Falling back to Gemini for Rewrite step.", openRouterErr.message);
+    rewrittenResume = await geminiGenerate({
+      modelKey: 'rewrite',
+      messages: [{ role: 'user', content: prompt2Text }],
+      temperature: 0.3,
+    });
+  }
 
   const prompt3Text = PROMPTS.prompt3({
     resumeText,
@@ -56,35 +78,30 @@ export async function analyzeResume(resumeText, jobDescription) {
     jobDescription,
   });
 
-  const prompt3Raw = await generateChatCompletion({
+  const finalResumeRaw = await geminiGenerate({
     modelKey: 'review',
     messages: [{ role: 'user', content: prompt3Text }],
     temperature: 0.2,
-    maxTokens: 4096,
   });
 
+  // The new Gemini prompt outputs ONLY the final markdown resume.
+  // We provide an empty review object to keep UI compatibility.
   let review = {
     atsNotes: [],
     hiringManagerNotes: [],
     formattingSuggestions: [],
     explainChanges: [],
   };
-  let finalResume = rewrittenResume;
-
-  const jsonMatch = prompt3Raw.match(/===JSON_START===\s*([\s\S]*?)\s*===JSON_END===/);
-  if (jsonMatch) {
-    const parsed = safeJsonParse(jsonMatch[1]);
-    if (parsed) review = { ...review, ...parsed };
-  }
-
-  const resumeMatch = prompt3Raw.match(/===RESUME_START===\s*([\s\S]*?)\s*===RESUME_END===/);
-  if (resumeMatch) {
-    finalResume = resumeMatch[1].trim();
+  
+  // Clean up any potential markdown wrappers Gemini might add despite instructions
+  let finalResume = finalResumeRaw.trim();
+  if (finalResume.startsWith('```markdown')) {
+      finalResume = finalResume.replace(/^```markdown\s*/i, '').replace(/\s*```$/i, '').trim();
   }
 
   return {
     analysis,
-    rewrittenResume,
+    rewrittenResume, // This is now a raw list/extraction
     review,
     finalResume,
   };

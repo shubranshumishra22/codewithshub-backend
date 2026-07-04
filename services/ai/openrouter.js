@@ -15,6 +15,11 @@ if (MODEL_OVERRIDE) {
   Object.keys(MODEL_MAP).forEach((k) => { MODEL_MAP[k] = MODEL_OVERRIDE; });
 }
 
+const FALLBACK_MODELS = [
+  'google/gemma-2-9b-it:free',
+  'mistralai/mistral-7b-instruct:free'
+];
+
 export async function generateChatCompletion({
   modelKey,
   messages,
@@ -30,25 +35,37 @@ export async function generateChatCompletion({
     throw new Error(`Unknown model key: ${modelKey}`);
   }
 
-  const response = await axios.post(
-    `${BASE_URL}/chat/completions`,
-    {
-      model,
-      messages,
-      temperature,
-      max_tokens: maxTokens,
-    },
-    {
-      headers: {
-        Authorization: `Bearer ${env.openrouterApiKey}`,
-        'Content-Type': 'application/json',
-        'HTTP-Referer': env.clientUrl || 'http://localhost:5173',
-        'X-Title': 'CodeWithShub Resume AI',
-      },
-      timeout: 120000,
-    }
-  );
+  const modelsToTry = [model, ...FALLBACK_MODELS];
+  let lastError = null;
 
-  const choice = response.data.choices[0];
-  return choice.message?.content || choice.message?.reasoning || '';
+  for (const modelToTry of modelsToTry) {
+    try {
+      const response = await axios.post(
+        `${BASE_URL}/chat/completions`,
+        {
+          model: modelToTry,
+          messages,
+          temperature,
+          max_tokens: maxTokens,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${env.openrouterApiKey}`,
+            'Content-Type': 'application/json',
+            'HTTP-Referer': env.clientUrl || 'http://localhost:5173',
+            'X-Title': 'CodeWithShub Resume AI',
+          },
+          timeout: 120000,
+        }
+      );
+
+      const choice = response.data.choices[0];
+      return choice.message?.content || choice.message?.reasoning || '';
+    } catch (err) {
+      console.warn(`OpenRouter model ${modelToTry} failed, trying fallback...`, err.message);
+      lastError = err;
+    }
+  }
+
+  throw new Error(`All OpenRouter fallbacks failed. Last error: ${lastError?.message}`);
 }

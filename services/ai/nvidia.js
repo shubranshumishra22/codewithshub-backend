@@ -15,6 +15,11 @@ if (MODEL_OVERRIDE_KEY) {
   Object.keys(MODEL_MAP).forEach((k) => { MODEL_MAP[k] = MODEL_OVERRIDE_KEY; });
 }
 
+const FALLBACK_MODELS = [
+  'meta/llama-3.1-8b-instruct',
+  'google/gemma-2-9b-it'
+];
+
 export async function generateChatCompletion({
   modelKey,
   messages,
@@ -43,23 +48,35 @@ export async function generateChatCompletion({
       return m;
     });
 
-  const response = await axios.post(
-    `${BASE_URL}/chat/completions`,
-    {
-      model,
-      messages: safeMessages,
-      temperature,
-      max_tokens: maxTokens,
-    },
-    {
-      headers: {
-        Authorization: `Bearer ${env.nvidiaApiKey}`,
-        'Content-Type': 'application/json',
-      },
-      timeout: 180000,
-    }
-  );
+  const modelsToTry = [model, ...FALLBACK_MODELS];
+  let lastError = null;
 
-  const choice = response.data.choices[0];
-  return choice.message?.content || choice.message?.reasoning || '';
+  for (const modelToTry of modelsToTry) {
+    try {
+      const response = await axios.post(
+        `${BASE_URL}/chat/completions`,
+        {
+          model: modelToTry,
+          messages: safeMessages,
+          temperature,
+          max_tokens: maxTokens,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${env.nvidiaApiKey}`,
+            'Content-Type': 'application/json',
+          },
+          timeout: 180000,
+        }
+      );
+
+      const choice = response.data.choices[0];
+      return choice.message?.content || choice.message?.reasoning || '';
+    } catch (err) {
+      console.warn(`Nvidia model ${modelToTry} failed, trying fallback...`, err.message);
+      lastError = err;
+    }
+  }
+
+  throw new Error(`All Nvidia fallbacks failed. Last error: ${lastError?.message}`);
 }
