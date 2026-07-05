@@ -46,10 +46,10 @@ Extract all content from the resume and return a structured raw list of projects
     resumeText, // We will actually pass the original here if needed
     rewrittenResume,
     jobDescription,
-  }) => `"Now act as an ATS filter and a hiring manager reading 200 resumes in one sitting. Scan my new resume and tell me which sections would get skipped, then rewrite them so they actually stop the scroll."
-
-Generate a resume in the following strict format and style. This is a single-column, 
-ATS-friendly technical resume for ML/Software Engineering roles. Follow these rules exactly:
+  }) => `"Act as a professional resume editor. Take the rewritten experience and draft the final optimized resume. Do NOT output any critique, introductory text, explanations, or commentary. Start immediately with the resume content itself.
+  
+  Generate the resume in the following strict format and style. This is a single-column, 
+  ATS-friendly technical resume for ML/Software Engineering roles. Follow these rules exactly:
 
 STRUCTURE (in this order):
 1. HEADER: Full Name (large, bold) on its own line. Below it, one line with:
