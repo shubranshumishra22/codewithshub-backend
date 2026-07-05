@@ -64,12 +64,22 @@ export async function analyzeResume(resumeText, jobDescription) {
       maxTokens: 3072,
     });
   } catch (openRouterErr) {
-    console.warn("OpenRouter completely failed (likely rate limited). Falling back to Gemini for Rewrite step.", openRouterErr.message);
-    rewrittenResume = await geminiGenerate({
-      modelKey: 'rewrite',
-      messages: [{ role: 'user', content: prompt2Text }],
-      temperature: 0.3,
-    });
+    console.warn("OpenRouter completely failed. Falling back to Nvidia for Rewrite step.", openRouterErr.message);
+    try {
+      rewrittenResume = await nvidiaGenerate({
+        modelKey: 'rewrite',
+        messages: [{ role: 'user', content: prompt2Text }],
+        temperature: 0.3,
+        maxTokens: 3072,
+      });
+    } catch (nvidiaErr) {
+      console.warn("Nvidia also failed. Falling back to Gemini for Rewrite step.", nvidiaErr.message);
+      rewrittenResume = await geminiGenerate({
+        modelKey: 'rewrite',
+        messages: [{ role: 'user', content: prompt2Text }],
+        temperature: 0.3,
+      });
+    }
   }
 
   const prompt3Text = PROMPTS.prompt3({

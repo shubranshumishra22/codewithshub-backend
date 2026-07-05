@@ -16,8 +16,8 @@ if (MODEL_OVERRIDE) {
 }
 
 const FALLBACK_MODELS = [
-  'google/gemma-2-9b-it:free',
-  'mistralai/mistral-7b-instruct:free'
+  'meta-llama/llama-3.2-3b-instruct:free',
+  'qwen/qwen-2.5-coder-32b-instruct:free'
 ];
 
 export async function generateChatCompletion({
