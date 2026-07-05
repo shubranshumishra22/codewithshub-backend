@@ -2,6 +2,7 @@ import { generateChatCompletion as nvidiaGenerate } from './nvidia.js';
 import { generateChatCompletion as openrouterGenerate } from './openrouter.js';
 import { generateChatCompletion as geminiGenerate } from './gemini.js';
 import { PROMPTS } from './resumePrompts.js';
+import { CHAT_PROMPT } from './resumeChatPrompt.js';
 
 function safeJsonParse(text) {
   try {
@@ -15,7 +16,7 @@ function safeJsonParse(text) {
   }
 }
 
-export async function analyzeResume(resumeText, jobDescription) {
+export async function analyzeBasicResume(resumeText, jobDescription) {
   const prompt1Text = PROMPTS.prompt1({ resumeText, jobDescription });
 
   let analysisRaw;
@@ -48,6 +49,10 @@ export async function analyzeResume(resumeText, jobDescription) {
     _parseError: analysisRaw,
   };
 
+  return analysis;
+}
+
+export async function optimizeResume(resumeText, jobDescription, analysis) {
   const prompt2Text = PROMPTS.prompt2({
     resumeText,
     jobDescription,
@@ -115,25 +120,50 @@ export async function analyzeResume(resumeText, jobDescription) {
     }
   }
 
-  // The new Gemini prompt outputs ONLY the final markdown resume.
-  // We provide an empty review object to keep UI compatibility.
+  return {
+    rewrittenResume,
+    finalResume: finalResumeRaw,
+  };
+}
+
+export async function analyzeResume(resumeText, jobDescription) {
+  const analysis = await analyzeBasicResume(resumeText, jobDescription);
+  const { rewrittenResume, finalResume } = await optimizeResume(resumeText, jobDescription, analysis);
+
   let review = {
     atsNotes: [],
     hiringManagerNotes: [],
     formattingSuggestions: [],
     explainChanges: [],
   };
-  
-  // Clean up any potential markdown wrappers Gemini might add despite instructions
-  let finalResume = finalResumeRaw.trim();
-  if (finalResume.startsWith('```markdown')) {
-      finalResume = finalResume.replace(/^```markdown\s*/i, '').replace(/\s*```$/i, '').trim();
-  }
 
   return {
     analysis,
-    rewrittenResume, // This is now a raw list/extraction
+    rewrittenResume,
     review,
     finalResume,
   };
+}
+
+export async function chatResume(currentResume, userMessage, jobDescription) {
+  const promptText = CHAT_PROMPT({ currentResume, userMessage, jobDescription });
+
+  let updatedResumeRaw;
+  try {
+    updatedResumeRaw = await geminiGenerate({
+      modelKey: 'review', // Using review model since it uses gemini-2.5-flash which is perfect for code generation
+      messages: [{ role: 'user', content: promptText }],
+      temperature: 0.2,
+    });
+  } catch (geminiErr) {
+    console.warn("Gemini completely failed in chat. Falling back to Nvidia.", geminiErr.message);
+    updatedResumeRaw = await nvidiaGenerate({
+      modelKey: 'review',
+      messages: [{ role: 'user', content: promptText }],
+      temperature: 0.2,
+      maxTokens: 3072,
+    });
+  }
+
+  return updatedResumeRaw;
 }

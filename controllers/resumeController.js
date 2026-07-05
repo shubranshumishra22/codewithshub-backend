@@ -7,7 +7,7 @@ import { Document, Packer, Paragraph, TextRun, Header, Footer, AlignmentType } f
 import { exec } from 'child_process';
 import { promisify } from 'util';
 import crypto from 'crypto';
-import { analyzeResume } from '../services/ai/resumeAnalyzer.js';
+import { analyzeResume, analyzeBasicResume, optimizeResume, chatResume } from '../services/ai/resumeAnalyzer.js';
 
 const execPromise = promisify(exec);
 
@@ -156,9 +156,27 @@ export async function analyzeResumeHandler(req, res) {
     return res.status(422).json({ error: 'Job description is too short. Please provide a full job description.' });
   }
 
-  const result = await analyzeResume(resumeText, jobDescription);
+  try {
+    const analysis = await analyzeBasicResume(resumeText, jobDescription);
+    return res.json({ analysis });
+  } catch (err) {
+    return res.status(500).json({ error: `Analysis failed: ${err.message}` });
+  }
+}
 
-  return res.json(result);
+export async function optimizeResumeHandler(req, res) {
+  const { resumeText, jobDescription, analysis } = req.body;
+
+  if (!resumeText || !jobDescription || !analysis) {
+    return res.status(400).json({ error: 'resumeText, jobDescription, and analysis are required.' });
+  }
+
+  try {
+    const result = await optimizeResume(resumeText, jobDescription, analysis);
+    return res.json(result);
+  } catch (err) {
+    return res.status(500).json({ error: `Optimization failed: ${err.message}` });
+  }
 }
 
 function renderInlineMarkdown(doc, text, startX, startY, options = {}) {
@@ -361,5 +379,20 @@ export async function downloadResume(req, res) {
     }
   } catch (err) {
     return res.status(500).json({ error: `Failed to generate file: ${err.message}` });
+  }
+}
+
+export async function chatResumeHandler(req, res) {
+  const { currentResume, userMessage, jobDescription } = req.body;
+
+  if (!currentResume || !userMessage) {
+    return res.status(400).json({ error: 'currentResume and userMessage are required.' });
+  }
+
+  try {
+    const updatedResume = await chatResume(currentResume, userMessage, jobDescription || '');
+    return res.json({ finalResume: updatedResume });
+  } catch (err) {
+    return res.status(500).json({ error: `Chat revision failed: ${err.message}` });
   }
 }
