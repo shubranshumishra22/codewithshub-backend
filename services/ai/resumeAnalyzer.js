@@ -78,11 +78,32 @@ export async function analyzeResume(resumeText, jobDescription) {
     jobDescription,
   });
 
-  const finalResumeRaw = await geminiGenerate({
-    modelKey: 'review',
-    messages: [{ role: 'user', content: prompt3Text }],
-    temperature: 0.2,
-  });
+  let finalResumeRaw;
+  try {
+    finalResumeRaw = await geminiGenerate({
+      modelKey: 'review',
+      messages: [{ role: 'user', content: prompt3Text }],
+      temperature: 0.2,
+    });
+  } catch (geminiErr) {
+    console.warn("Gemini completely failed. Falling back to Nvidia for Review step.", geminiErr.message);
+    try {
+      finalResumeRaw = await nvidiaGenerate({
+        modelKey: 'review',
+        messages: [{ role: 'user', content: prompt3Text }],
+        temperature: 0.2,
+        maxTokens: 3072,
+      });
+    } catch (nvidiaErr) {
+      console.warn("Nvidia also failed. Falling back to OpenRouter for Review step.", nvidiaErr.message);
+      finalResumeRaw = await openrouterGenerate({
+        modelKey: 'review',
+        messages: [{ role: 'user', content: prompt3Text }],
+        temperature: 0.2,
+        maxTokens: 3072,
+      });
+    }
+  }
 
   // The new Gemini prompt outputs ONLY the final markdown resume.
   // We provide an empty review object to keep UI compatibility.
