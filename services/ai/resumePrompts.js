@@ -46,7 +46,14 @@ Extract all content from the resume and return a structured raw list of projects
     resumeText,
     rewrittenResume,
     jobDescription,
-  }) => `"Act as a professional Python developer and resume designer. Take the rewritten experience content and output a self-contained, executable Python script using the ReportLab library to build a high-fidelity PDF. 
+  }) => `"Act as a professional Python developer and resume designer.
+
+CRITICAL: Extract the candidate's actual Name, Email, Phone Number, LinkedIn link, GitHub link, and Location from their original resume text:
+${resumeText}
+
+You MUST substitute the placeholder credentials (like "SHUBRANSHU SHEKHAR", "shubranshumishra22@gmail.com", etc.) in the ReportLab Python template below with the candidate's real extracted details. If a specific credential is not present in their original resume, omit it.
+
+Take the rewritten experience content and output a self-contained, executable Python script using the ReportLab library to build a high-fidelity PDF. 
 
 Do NOT output any critique, introductory text, explanations, or commentary. Output ONLY the valid Python code. Start your response with \`\`\`python and end with \`\`\`.
 

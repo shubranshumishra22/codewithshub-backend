@@ -1,0 +1,2989 @@
+[
+  {
+    "sNo": 1,
+    "number": 2033,
+    "title": "2033. Minimum Operations to Make a Uni-Value Grid",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Math"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-operations-to-make-a-uni-value-grid/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 2,
+    "number": 3169,
+    "title": "3169. Count Days Without Meetings",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Sorting"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/count-days-without-meetings/",
+    "topic": "Array: Sorting"
+  },
+  {
+    "sNo": 3,
+    "number": 1976,
+    "title": "1976. Number of Ways to Arrive at Destination",
+    "difficulty": "medium",
+    "tags": [
+      "Dynamic Programming",
+      "Graph Theory"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/",
+    "topic": "Graph: Graph DP"
+  },
+  {
+    "sNo": 4,
+    "number": 3108,
+    "title": "3108. Minimum Cost Walk in Weighted Graph",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Bit Manipulation"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-walk-in-weighted-graph/",
+    "topic": "Bit Manipulation: Bitwise Operations"
+  },
+  {
+    "sNo": 5,
+    "number": 3191,
+    "title": "3191. Minimum Operations to Make Binary Array Elements Equal to One I",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Bit Manipulation"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-operations-to-make-binary-array-elements-equal-to-one-i/",
+    "topic": "Bit Manipulation: Bitwise Operations"
+  },
+  {
+    "sNo": 6,
+    "number": 2206,
+    "title": "2206. Divide Array Into Equal Pairs",
+    "difficulty": "easy",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/divide-array-into-equal-pairs/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 7,
+    "number": 2594,
+    "title": "2594. Minimum Time to Repair Cars",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-time-to-repair-cars/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 8,
+    "number": 2560,
+    "title": "2560. House Robber IV",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/house-robber-iv/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 9,
+    "number": 3356,
+    "title": "3356. Zero Array Transformation II",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Two Pointers"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/zero-array-transformation-ii/",
+    "topic": "Array: Two-Pointer"
+  },
+  {
+    "sNo": 10,
+    "number": 2529,
+    "title": "2529. Maximum Count of Positive Integer and Negative Integer",
+    "difficulty": "easy",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 11,
+    "number": 1358,
+    "title": "1358. Number of Substrings Containing All Three Characters",
+    "difficulty": "medium",
+    "tags": [
+      "Hash Table",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 12,
+    "number": 3306,
+    "title": "3306. Count of Substrings Containing Every Vowel and K Consonants II",
+    "difficulty": "medium",
+    "tags": [
+      "Hash Table",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-substrings-containing-every-vowel-and-k-consonants-ii/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 13,
+    "number": 3208,
+    "title": "3208. Alternating Groups II",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Sliding Window"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/alternating-groups-ii/",
+    "topic": "Array: Sliding Window"
+  },
+  {
+    "sNo": 14,
+    "number": 2379,
+    "title": "2379. Minimum Recolors to Get K Consecutive Black Blocks",
+    "difficulty": "easy",
+    "tags": [
+      "String",
+      "Sliding Window"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/",
+    "topic": "String: Sliding Window"
+  },
+  {
+    "sNo": 15,
+    "number": 2523,
+    "title": "2523. Closest Prime Numbers in Range",
+    "difficulty": "medium",
+    "tags": [
+      "Math",
+      "Number Theory"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/closest-prime-numbers-in-range/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 16,
+    "number": 2965,
+    "title": "2965. Find Missing and Repeated Values",
+    "difficulty": "easy",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/find-missing-and-repeated-values/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 17,
+    "number": 2161,
+    "title": "2161. Partition Array According to Given Pivot",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Two Pointers"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/partition-array-according-to-given-pivot/",
+    "topic": "Array: Two-Pointer"
+  },
+  {
+    "sNo": 18,
+    "number": 2570,
+    "title": "2570. Merge Two 2D Arrays by Summing Values",
+    "difficulty": "easy",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 19,
+    "number": 2460,
+    "title": "2460. Apply Operations to an Array",
+    "difficulty": "easy",
+    "tags": [
+      "Array",
+      "Two Pointers"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/apply-operations-to-an-array/",
+    "topic": "Array: Two-Pointer"
+  },
+  {
+    "sNo": 20,
+    "number": 139,
+    "title": "139. Word Break",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/word-break/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 21,
+    "number": 1092,
+    "title": "1092. Shortest Common Supersequence",
+    "difficulty": "hard",
+    "tags": [
+      "String",
+      "Dynamic Programming"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-common-supersequence/",
+    "topic": "Dynamic Programming: DP on Strings"
+  },
+  {
+    "sNo": 22,
+    "number": 873,
+    "title": "873. Length of Longest Fibonacci Subsequence",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/length-of-longest-fibonacci-subsequence/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 23,
+    "number": 1749,
+    "title": "1749. Maximum Absolute Sum of Any Subarray",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Dynamic Programming"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 24,
+    "number": 2467,
+    "title": "2467. Most Profitable Path in a Tree",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Tree"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/most-profitable-path-in-a-tree/",
+    "topic": "Tree: Trees & Traversals"
+  },
+  {
+    "sNo": 25,
+    "number": 889,
+    "title": "889. Construct Binary Tree from Preorder and Postorder Traversal",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 26,
+    "number": 1524,
+    "title": "1524. Number of Sub-arrays With Odd Sum",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Math"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 27,
+    "number": 1028,
+    "title": "1028. Recover a Tree From Preorder Traversal",
+    "difficulty": "hard",
+    "tags": [
+      "String",
+      "Tree"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/",
+    "topic": "Tree: Trees & Traversals"
+  },
+  {
+    "sNo": 28,
+    "number": 1261,
+    "title": "1261. Find Elements in a Contaminated Binary Tree",
+    "difficulty": "medium",
+    "tags": [
+      "Hash Table",
+      "Tree"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree/",
+    "topic": "Tree: Trees & Traversals"
+  },
+  {
+    "sNo": 29,
+    "number": 1980,
+    "title": "1980. Find Unique Binary String",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/find-unique-binary-string/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 30,
+    "number": 1415,
+    "title": "1415. The k-th Lexicographical String of All Happy Strings of Length n",
+    "difficulty": "medium",
+    "tags": [
+      "String",
+      "Backtracking"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/",
+    "topic": "Backtracking: Recursion & Backtracking"
+  },
+  {
+    "sNo": 31,
+    "number": 2375,
+    "title": "2375. Construct Smallest Number From DI String",
+    "difficulty": "medium",
+    "tags": [
+      "String",
+      "Backtracking"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/construct-smallest-number-from-di-string/",
+    "topic": "Backtracking: Recursion & Backtracking"
+  },
+  {
+    "sNo": 32,
+    "number": 1079,
+    "title": "1079. Letter Tile Possibilities",
+    "difficulty": "medium",
+    "tags": [
+      "Hash Table",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/letter-tile-possibilities/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 33,
+    "number": 1718,
+    "title": "1718. Construct the Lexicographically Largest Valid Sequence",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Backtracking"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/construct-the-lexicographically-largest-valid-sequence/",
+    "topic": "Backtracking: Recursion & Backtracking"
+  },
+  {
+    "sNo": 34,
+    "number": 2698,
+    "title": "2698. Find the Punishment Number of an Integer",
+    "difficulty": "medium",
+    "tags": [
+      "Math",
+      "Backtracking"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/find-the-punishment-number-of-an-integer/",
+    "topic": "Backtracking: Recursion & Backtracking"
+  },
+  {
+    "sNo": 35,
+    "number": 1352,
+    "title": "1352. Product of the Last K Numbers",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Math"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/product-of-the-last-k-numbers/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 36,
+    "number": 3066,
+    "title": "3066. Minimum Operations to Exceed Threshold Value II",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Heap"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-ii/",
+    "topic": "Heap: Priority Queue"
+  },
+  {
+    "sNo": 37,
+    "number": 2342,
+    "title": "2342. Max Sum of a Pair With Equal Sum of Digits",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 38,
+    "number": 1905,
+    "title": "1905. Count Sub Islands",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "DFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/count-sub-islands/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 39,
+    "number": 86,
+    "title": "86. Partition List",
+    "difficulty": "medium",
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/partition-list/",
+    "topic": "Linked List: Two-Pointer"
+  },
+  {
+    "sNo": 40,
+    "number": 1910,
+    "title": "1910. Remove All Occurrences of a Substring",
+    "difficulty": "medium",
+    "tags": [
+      "String",
+      "Stack"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/remove-all-occurrences-of-a-substring/",
+    "topic": "Stack & Queue: Stack & Queue Patterns"
+  },
+  {
+    "sNo": 41,
+    "number": 3174,
+    "title": "3174. Clear Digits",
+    "difficulty": "easy",
+    "tags": [
+      "String",
+      "Stack"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/clear-digits/",
+    "topic": "Stack & Queue: Stack & Queue Patterns"
+  },
+  {
+    "sNo": 42,
+    "number": 1443,
+    "title": "1443. Minimum Time to Collect All Apples in a Tree",
+    "difficulty": "medium",
+    "tags": [
+      "Hash Table",
+      "Tree"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/",
+    "topic": "Tree: Trees & Traversals"
+  },
+  {
+    "sNo": 43,
+    "number": 1828,
+    "title": "1828. Queries on Number of Points Inside a Circle",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Math"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 44,
+    "number": 454,
+    "title": "454. 4Sum II",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/4sum-ii/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 45,
+    "number": 810,
+    "title": "810. Chalkboard XOR Game",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Math"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/chalkboard-xor-game/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 46,
+    "number": 532,
+    "title": "532. K-diff Pairs in an Array",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/k-diff-pairs-in-an-array/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 47,
+    "number": 2006,
+    "title": "2006. Count Number of Pairs With Absolute Difference K",
+    "difficulty": "easy",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 48,
+    "number": 2364,
+    "title": "2364. Count Number of Bad Pairs",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/count-number-of-bad-pairs/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 49,
+    "number": 839,
+    "title": "839. Similar String Groups",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/similar-string-groups/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 50,
+    "number": 843,
+    "title": "843. Guess the Word",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Math"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/guess-the-word/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 51,
+    "number": 1970,
+    "title": "1970. Last Day Where You Can Still Cross",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/last-day-where-you-can-still-cross/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 52,
+    "number": 3235,
+    "title": "3235. Check if the Rectangle Corner Is Reachable",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Math"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/check-if-the-rectangle-corner-is-reachable/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 53,
+    "number": 685,
+    "title": "685. Redundant Connection II",
+    "difficulty": "hard",
+    "tags": [
+      "DFS",
+      "BFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/redundant-connection-ii/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 54,
+    "number": 2349,
+    "title": "2349. Design a Number Container System",
+    "difficulty": "medium",
+    "tags": [
+      "Hash Table",
+      "Design"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/design-a-number-container-system/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 55,
+    "number": 850,
+    "title": "850. Rectangle Area II",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Segment Tree"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/rectangle-area-ii/",
+    "topic": "Segment Tree: Range Queries"
+  },
+  {
+    "sNo": 56,
+    "number": 2493,
+    "title": "2493. Divide Nodes Into the Maximum Number of Groups",
+    "difficulty": "hard",
+    "tags": [
+      "DFS",
+      "BFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/divide-nodes-into-the-maximum-number-of-groups/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 57,
+    "number": 1052,
+    "title": "1052. Grumpy Bookstore Owner",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Sliding Window"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/grumpy-bookstore-owner/",
+    "topic": "Array: Sliding Window"
+  },
+  {
+    "sNo": 58,
+    "number": 3160,
+    "title": "3160. Find the Number of Distinct Colors Among the Balls",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/find-the-number-of-distinct-colors-among-the-balls/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 59,
+    "number": 803,
+    "title": "803. Bricks Falling When Hit",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Union-Find"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/bricks-falling-when-hit/",
+    "topic": "Graph: Union-Find (Disjoint Set)"
+  },
+  {
+    "sNo": 60,
+    "number": 2359,
+    "title": "2359. Find Closest Node to Given Two Nodes",
+    "difficulty": "medium",
+    "tags": [
+      "DFS",
+      "Graph"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/find-closest-node-to-given-two-nodes/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 61,
+    "number": 1726,
+    "title": "1726. Tuple with Same Product",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/tuple-with-same-product/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 62,
+    "number": 684,
+    "title": "684. Redundant Connection",
+    "difficulty": "medium",
+    "tags": [
+      "DFS",
+      "BFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/redundant-connection/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 63,
+    "number": 1790,
+    "title": "1790. Check if One String Swap Can Make Strings Equal",
+    "difficulty": "easy",
+    "tags": [
+      "Hash Table",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 64,
+    "number": 1109,
+    "title": "1109. Corporate Flight Bookings",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Prefix Sum"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/corporate-flight-bookings/",
+    "topic": "Array: Prefix Sum"
+  },
+  {
+    "sNo": 65,
+    "number": 1800,
+    "title": "1800. Maximum Ascending Subarray Sum",
+    "difficulty": "easy",
+    "tags": [
+      "Array"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-ascending-subarray-sum/",
+    "topic": "Array: Simulation & General"
+  },
+  {
+    "sNo": 66,
+    "number": 56,
+    "title": "56. Merge Intervals",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Sorting"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/merge-intervals/",
+    "topic": "Array: Sorting"
+  },
+  {
+    "sNo": 67,
+    "number": 391,
+    "title": "391. Perfect Rectangle",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/perfect-rectangle/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 68,
+    "number": 3105,
+    "title": "3105. Longest Strictly Increasing or Strictly Decreasing Subarray",
+    "difficulty": "easy",
+    "tags": [
+      "Array"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/",
+    "topic": "Array: Simulation & General"
+  },
+  {
+    "sNo": 69,
+    "number": 834,
+    "title": "834. Sum of Distances in Tree",
+    "difficulty": "hard",
+    "tags": [
+      "DP",
+      "Tree"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/sum-of-distances-in-tree/",
+    "topic": "Tree: Tree DP & DFS"
+  },
+  {
+    "sNo": 70,
+    "number": 2360,
+    "title": "2360. Longest Cycle in a Graph",
+    "difficulty": "hard",
+    "tags": [
+      "DFS",
+      "BFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/longest-cycle-in-a-graph/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 71,
+    "number": 1752,
+    "title": "1752. Check if Array Is Sorted and Rotated",
+    "difficulty": "easy",
+    "tags": [
+      "Array"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/",
+    "topic": "Array: Simulation & General"
+  },
+  {
+    "sNo": 72,
+    "number": 2608,
+    "title": "2608. Shortest Cycle in a Graph",
+    "difficulty": "hard",
+    "tags": [
+      "BFS",
+      "Graph"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-cycle-in-a-graph/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 73,
+    "number": 4,
+    "title": "4. Median of Two Sorted Arrays",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 74,
+    "number": 857,
+    "title": "857. Minimum Cost to Hire K Workers",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Greedy"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-to-hire-k-workers/",
+    "topic": "Greedy: Greedy Algorithms"
+  },
+  {
+    "sNo": 75,
+    "number": 3151,
+    "title": "3151. Special Array I",
+    "difficulty": "easy",
+    "tags": [
+      "Array"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/special-array-i/",
+    "topic": "Array: Simulation & General"
+  },
+  {
+    "sNo": 76,
+    "number": 827,
+    "title": "827. Making A Large Island",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "DFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/making-a-large-island/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 77,
+    "number": 854,
+    "title": "854. K-similar Strings",
+    "difficulty": "hard",
+    "tags": [
+      "Hash Table",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/k-similar-strings/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 78,
+    "number": 2658,
+    "title": "2658. Maximum Number of Fish in a Grid",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "DFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-number-of-fish-in-a-grid/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 79,
+    "number": 2127,
+    "title": "2127. Maximum Employees to Be Invited to a Meeting",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-employees-to-be-invited-to-a-meeting/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 80,
+    "number": 1462,
+    "title": "1462. Course Schedule IV",
+    "difficulty": "medium",
+    "tags": [
+      "DFS",
+      "BFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/course-schedule-iv/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 81,
+    "number": 818,
+    "title": "818. Race Car",
+    "difficulty": "hard",
+    "tags": [
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/race-car/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 82,
+    "number": 2948,
+    "title": "2948. Make Lexicographically Smallest Array by Swapping Elements",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Union-Find"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/make-lexicographically-smallest-array-by-swapping-elements/",
+    "topic": "Graph: Union-Find (Disjoint Set)"
+  },
+  {
+    "sNo": 83,
+    "number": 829,
+    "title": "829. Consecutive Numbers Sum",
+    "difficulty": "hard",
+    "tags": [
+      "Math",
+      "Enumeration"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/consecutive-numbers-sum/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 84,
+    "number": 802,
+    "title": "802. Find Eventual Safe States",
+    "difficulty": "medium",
+    "tags": [
+      "DFS",
+      "BFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/find-eventual-safe-states/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 85,
+    "number": 801,
+    "title": "801. Minimum Swaps To Make Sequences Increasing",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 86,
+    "number": 1267,
+    "title": "1267. Count Servers that Communicate",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "DFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/count-servers-that-communicate/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 87,
+    "number": 2256,
+    "title": "2256. Minimum Average Difference",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Prefix Sum"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-average-difference/",
+    "topic": "Array: Prefix Sum"
+  },
+  {
+    "sNo": 88,
+    "number": 2543,
+    "title": "2543. Check if Point Is Reachable",
+    "difficulty": "hard",
+    "tags": [
+      "Math",
+      "Number Theory"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/check-if-point-is-reachable/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 89,
+    "number": 1765,
+    "title": "1765. Map of Highest Peak",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "BFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/map-of-highest-peak/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 90,
+    "number": 805,
+    "title": "805. Split Array With Same Average",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/split-array-with-same-average/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 91,
+    "number": 2017,
+    "title": "2017. Grid Game",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/grid-game/",
+    "topic": "Array: Simulation & General"
+  },
+  {
+    "sNo": 92,
+    "number": 9,
+    "title": "9. Palindrome Number",
+    "difficulty": "easy",
+    "tags": [
+      "Math"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/palindrome-number/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 93,
+    "number": 2661,
+    "title": "2661. First Completely Painted Row or Column",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/first-completely-painted-row-or-column/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 94,
+    "number": 780,
+    "title": "780. Reaching Points",
+    "difficulty": "hard",
+    "tags": [
+      "Math"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/reaching-points/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 95,
+    "number": 778,
+    "title": "778. Swim in Rising Water",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/swim-in-rising-water/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 96,
+    "number": 407,
+    "title": "407. Trapping Rain Water II",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "BFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/trapping-rain-water-ii/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 97,
+    "number": 773,
+    "title": "773. Sliding Puzzle",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/sliding-puzzle/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 98,
+    "number": 600,
+    "title": "600. Non-negative Integers without Consecutive Ones",
+    "difficulty": "hard",
+    "tags": [
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/non-negative-integers-without-consecutive-ones/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 99,
+    "number": 1368,
+    "title": "1368. Minimum Cost to Make at Least One Valid Path in a Grid",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "BFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 100,
+    "number": 887,
+    "title": "887. Super Egg Drop",
+    "difficulty": "hard",
+    "tags": [
+      "Math",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/super-egg-drop/",
+    "topic": "Binary Search: Binary Search on Answers"
+  },
+  {
+    "sNo": 101,
+    "number": 745,
+    "title": "745. Prefix and Suffix Search",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/prefix-and-suffix-search/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 102,
+    "number": 2683,
+    "title": "2683. Neighboring Bitwise XOR",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Bit Manipulation"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/neighboring-bitwise-xor/",
+    "topic": "Bit Manipulation: Bitwise Operations"
+  },
+  {
+    "sNo": 103,
+    "number": 2425,
+    "title": "2425. Bitwise XOR of All Pairings",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Bit Manipulation"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/bitwise-xor-of-all-pairings/",
+    "topic": "Bit Manipulation: Bitwise Operations"
+  },
+  {
+    "sNo": 104,
+    "number": 2429,
+    "title": "2429. Minimize XOR",
+    "difficulty": "medium",
+    "tags": [
+      "Greedy",
+      "Bit Manipulation"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimize-xor/",
+    "topic": "Bit Manipulation: Bitwise Operations"
+  },
+  {
+    "sNo": 105,
+    "number": 212,
+    "title": "212. Word Search II",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/word-search-ii/",
+    "topic": "String: Basic & Simulation"
+  },
+  {
+    "sNo": 106,
+    "number": 2954,
+    "title": "2954. Count the Number of Infection Sequences",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Math"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/count-the-number-of-infection-sequences/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 107,
+    "number": 2484,
+    "title": "2484. Count Palindromic Subsequences",
+    "difficulty": "hard",
+    "tags": [
+      "String",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/count-palindromic-subsequences/",
+    "topic": "Dynamic Programming: DP on Strings"
+  },
+  {
+    "sNo": 108,
+    "number": 1400,
+    "title": "1400. Construct K Palindrome Strings",
+    "difficulty": "medium",
+    "tags": [
+      "Hash Table",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/construct-k-palindrome-strings/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 109,
+    "number": 916,
+    "title": "916. Word Subsets",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/word-subsets/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 110,
+    "number": 2185,
+    "title": "2185. Counting Words With a Given Prefix",
+    "difficulty": "easy",
+    "tags": [
+      "Array",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/counting-words-with-a-given-prefix/",
+    "topic": "String: Basic & Simulation"
+  },
+  {
+    "sNo": 111,
+    "number": 3042,
+    "title": "3042. Count Prefix and Suffix Pairs I",
+    "difficulty": "easy",
+    "tags": [
+      "Array",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/count-prefix-and-suffix-pairs-i/",
+    "topic": "String: Basic & Simulation"
+  },
+  {
+    "sNo": 112,
+    "number": 1408,
+    "title": "1408. String Matching in an Array",
+    "difficulty": "easy",
+    "tags": [
+      "Array",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/string-matching-in-an-array/",
+    "topic": "String: Basic & Simulation"
+  },
+  {
+    "sNo": 113,
+    "number": 761,
+    "title": "761. Special Binary String",
+    "difficulty": "hard",
+    "tags": [
+      "String",
+      "Divide & Conquer"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/special-binary-string/",
+    "topic": "String: Basic & Simulation"
+  },
+  {
+    "sNo": 114,
+    "number": 1769,
+    "title": "1769. Minimum Number of Operations to Move All Balls to Each Box",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/",
+    "topic": "String: Basic & Simulation"
+  },
+  {
+    "sNo": 115,
+    "number": 848,
+    "title": "848. Shifting Letters",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/shifting-letters/",
+    "topic": "String: Basic & Simulation"
+  },
+  {
+    "sNo": 116,
+    "number": 2381,
+    "title": "2381. Shifting Letters II",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/shifting-letters-ii/",
+    "topic": "String: Basic & Simulation"
+  },
+  {
+    "sNo": 117,
+    "number": 749,
+    "title": "749. Contain Virus",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "DFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/contain-virus/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 118,
+    "number": 1930,
+    "title": "1930. Unique Length-3 Palindromic Subsequences",
+    "difficulty": "medium",
+    "tags": [
+      "Hash Table",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/unique-length-3-palindromic-subsequences/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 119,
+    "number": 2270,
+    "title": "2270. Number of Ways to Split Array",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Prefix Sum"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/number-of-ways-to-split-array/",
+    "topic": "Array: Prefix Sum"
+  },
+  {
+    "sNo": 120,
+    "number": 2559,
+    "title": "2559. Count Vowel Strings in Ranges",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/count-vowel-strings-in-ranges/",
+    "topic": "String: Basic & Simulation"
+  },
+  {
+    "sNo": 121,
+    "number": 753,
+    "title": "753. Cracking the Safe",
+    "difficulty": "hard",
+    "tags": [
+      "String",
+      "DFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/cracking-the-safe/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 122,
+    "number": 1422,
+    "title": "1422. Maximum Score After Splitting a String",
+    "difficulty": "easy",
+    "tags": [
+      "String",
+      "Prefix Sum"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-score-after-splitting-a-string/",
+    "topic": "Array: Prefix Sum"
+  },
+  {
+    "sNo": 123,
+    "number": 730,
+    "title": "730. Count Different Palindromic Subsequences",
+    "difficulty": "hard",
+    "tags": [
+      "String",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/count-different-palindromic-subsequences/",
+    "topic": "Dynamic Programming: DP on Strings"
+  },
+  {
+    "sNo": 124,
+    "number": 1249,
+    "title": "1249. Minimum Remove to Make Valid Parentheses",
+    "difficulty": "medium",
+    "tags": [
+      "String",
+      "Stack"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/",
+    "topic": "Stack & Queue: Stack & Queue Patterns"
+  },
+  {
+    "sNo": 125,
+    "number": 662,
+    "title": "662. Maximum Width of Binary Tree",
+    "difficulty": "medium",
+    "tags": [
+      "Tree",
+      "DFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-width-of-binary-tree/",
+    "topic": "Tree: Tree DP & DFS"
+  },
+  {
+    "sNo": 126,
+    "number": 3203,
+    "title": "3203. Find Minimum Diameter After Merging Two Trees",
+    "difficulty": "hard",
+    "tags": [
+      "Tree",
+      "DFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/find-minimum-diameter-after-merging-two-trees/",
+    "topic": "Tree: Tree DP & DFS"
+  },
+  {
+    "sNo": 127,
+    "number": 699,
+    "title": "699. Falling Squares",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Segment Tree"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/falling-squares/",
+    "topic": "Segment Tree: Range Queries"
+  },
+  {
+    "sNo": 128,
+    "number": 983,
+    "title": "983. Minimum Cost For Tickets",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-for-tickets/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 129,
+    "number": 564,
+    "title": "564. Find the Closest Palindrome",
+    "difficulty": "hard",
+    "tags": [
+      "Math",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/find-the-closest-palindrome/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 130,
+    "number": 378,
+    "title": "378. Kth Smallest Element in a Sorted Matrix",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 131,
+    "number": 668,
+    "title": "668. Kth Smallest Number in Multiplication Table",
+    "difficulty": "hard",
+    "tags": [
+      "Math",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/",
+    "topic": "Binary Search: Binary Search on Answers"
+  },
+  {
+    "sNo": 132,
+    "number": 719,
+    "title": "719. Find K-th Smallest Pair Distance",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Two Pointers"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/find-k-th-smallest-pair-distance/",
+    "topic": "Array: Two-Pointer"
+  },
+  {
+    "sNo": 133,
+    "number": 765,
+    "title": "765. Couples Holding Hands",
+    "difficulty": "hard",
+    "tags": [
+      "Greedy",
+      "DFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/couples-holding-hands/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 134,
+    "number": 587,
+    "title": "587. Erect the Fence",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Math"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/erect-the-fence/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 135,
+    "number": 731,
+    "title": "731. My Calendar II",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/my-calendar-ii/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 136,
+    "number": 2466,
+    "title": "2466. Count Ways To Build Good Strings",
+    "difficulty": "medium",
+    "tags": [
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/count-ways-to-build-good-strings/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 137,
+    "number": 2276,
+    "title": "2276. Count Integers in Intervals",
+    "difficulty": "hard",
+    "tags": [
+      "Design",
+      "Segment Tree"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/count-integers-in-intervals/",
+    "topic": "Segment Tree: Range Queries"
+  },
+  {
+    "sNo": 138,
+    "number": 732,
+    "title": "732. My Calendar III",
+    "difficulty": "hard",
+    "tags": [
+      "Binary Search",
+      "Design"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/my-calendar-iii/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 139,
+    "number": 729,
+    "title": "729. My Calendar I",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/my-calendar-i/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 140,
+    "number": 689,
+    "title": "689. Maximum Sum of 3 Non-Overlapping Subarrays",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 141,
+    "number": 18,
+    "title": "18. 4Sum",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Two Pointers"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/4sum/",
+    "topic": "Array: Two-Pointer"
+  },
+  {
+    "sNo": 142,
+    "number": 2415,
+    "title": "2415. Reverse Odd Levels of Binary Tree",
+    "difficulty": "medium",
+    "tags": [
+      "Tree",
+      "DFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/reverse-odd-levels-of-binary-tree/",
+    "topic": "Tree: Tree DP & DFS"
+  },
+  {
+    "sNo": 143,
+    "number": 632,
+    "title": "632. Smallest Range Covering Elements from K Lists",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 144,
+    "number": 769,
+    "title": "769. Max Chunks To Make Sorted",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Stack"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/max-chunks-to-make-sorted/",
+    "topic": "Stack & Queue: Stack & Queue Patterns"
+  },
+  {
+    "sNo": 145,
+    "number": 768,
+    "title": "768. Max Chunks To Make Sorted II",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Stack"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/max-chunks-to-make-sorted-ii/",
+    "topic": "Stack & Queue: Stack & Queue Patterns"
+  },
+  {
+    "sNo": 146,
+    "number": 630,
+    "title": "630. Course Schedule III",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Greedy"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/course-schedule-iii/",
+    "topic": "Greedy: Greedy Algorithms"
+  },
+  {
+    "sNo": 147,
+    "number": 1438,
+    "title": "1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Queue"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/",
+    "topic": "Stack & Queue: Stack & Queue Patterns"
+  },
+  {
+    "sNo": 148,
+    "number": 1475,
+    "title": "1475. Final Prices With a Special Discount in a Shop",
+    "difficulty": "easy",
+    "tags": [
+      "Array",
+      "Stack"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/",
+    "topic": "Stack & Queue: Stack & Queue Patterns"
+  },
+  {
+    "sNo": 149,
+    "number": 44,
+    "title": "44. Wildcard Matching",
+    "difficulty": "hard",
+    "tags": [
+      "String",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/wildcard-matching/",
+    "topic": "Dynamic Programming: DP on Strings"
+  },
+  {
+    "sNo": 150,
+    "number": 862,
+    "title": "862. Shortest Subarray with Sum at Least K",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 151,
+    "number": 2182,
+    "title": "2182. Construct String With Repeat Limit",
+    "difficulty": "medium",
+    "tags": [
+      "Hash Table",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/construct-string-with-repeat-limit/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 152,
+    "number": 3264,
+    "title": "3264. Final Array State After K Multiplication Operations I",
+    "difficulty": "easy",
+    "tags": [
+      "Array",
+      "Math"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 153,
+    "number": 2593,
+    "title": "2593. Find Score of an Array After Marking All Elements",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/find-score-of-an-array-after-marking-all-elements/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 154,
+    "number": 140,
+    "title": "140. Word Break II",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/word-break-ii/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 155,
+    "number": 41,
+    "title": "41. First Missing Positive",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/first-missing-positive/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 156,
+    "number": 87,
+    "title": "87. Scramble String",
+    "difficulty": "hard",
+    "tags": [
+      "String",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/scramble-string/",
+    "topic": "Dynamic Programming: DP on Strings"
+  },
+  {
+    "sNo": 157,
+    "number": 2558,
+    "title": "2558. Take Gifts From the Richest Pile",
+    "difficulty": "easy",
+    "tags": [
+      "Array",
+      "Heap"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/take-gifts-from-the-richest-pile/",
+    "topic": "Heap: Priority Queue"
+  },
+  {
+    "sNo": 158,
+    "number": 76,
+    "title": "76. Minimum Window Substring",
+    "difficulty": "hard",
+    "tags": [
+      "Hash Table",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-window-substring/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 159,
+    "number": 37,
+    "title": "37. Sudoku Solver",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/sudoku-solver/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 160,
+    "number": 52,
+    "title": "52. N-Queens II",
+    "difficulty": "hard",
+    "tags": [
+      "Backtracking"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/n-queens-ii/",
+    "topic": "Backtracking: Recursion & Backtracking"
+  },
+  {
+    "sNo": 161,
+    "number": 174,
+    "title": "174. Dungeon Game",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/dungeon-game/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 162,
+    "number": 2779,
+    "title": "2779. Maximum Beauty of an Array After Applying Operation",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 163,
+    "number": 51,
+    "title": "51. N-Queens",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Backtracking"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/n-queens/",
+    "topic": "Backtracking: Recursion & Backtracking"
+  },
+  {
+    "sNo": 164,
+    "number": 395,
+    "title": "395. Longest Substring with At Least K Repeating Characters",
+    "difficulty": "medium",
+    "tags": [
+      "Hash Table",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 165,
+    "number": 3,
+    "title": "3. Longest Substring Without Repeating Characters",
+    "difficulty": "medium",
+    "tags": [
+      "Hash Table",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 166,
+    "number": 149,
+    "title": "149. Max Points on a Line",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/max-points-on-a-line/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 167,
+    "number": 2981,
+    "title": "2981. Find Longest Special Substring That Occurs Thrice I",
+    "difficulty": "medium",
+    "tags": [
+      "Hash Table",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/find-longest-special-substring-that-occurs-thrice-i/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 168,
+    "number": 2054,
+    "title": "2054. Two Best Non-Overlapping Events",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/two-best-non-overlapping-events/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 169,
+    "number": 1760,
+    "title": "1760. Minimum Limit of Balls in a Bag",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 170,
+    "number": 2545,
+    "title": "2545. Sort the Students by Their Kth Score",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Sorting"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/sort-the-students-by-their-kth-score/",
+    "topic": "Array: Sorting"
+  },
+  {
+    "sNo": 171,
+    "number": 2554,
+    "title": "2554. Maximum Number of Integers to Choose From a Range I",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-i/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 172,
+    "number": 79,
+    "title": "79. Word Search",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/word-search/",
+    "topic": "String: Basic & Simulation"
+  },
+  {
+    "sNo": 173,
+    "number": 132,
+    "title": "132. Palindrome Partitioning II",
+    "difficulty": "hard",
+    "tags": [
+      "String",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/palindrome-partitioning-ii/",
+    "topic": "Dynamic Programming: DP on Strings"
+  },
+  {
+    "sNo": 174,
+    "number": 3036,
+    "title": "3036. Number of Subarrays That Match a Pattern II",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Rolling Hash"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-ii/",
+    "topic": "Array: Simulation & General"
+  },
+  {
+    "sNo": 175,
+    "number": 3034,
+    "title": "3034. Number of Subarrays That Match a Pattern I",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Rolling Hash"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-i/",
+    "topic": "Array: Simulation & General"
+  },
+  {
+    "sNo": 176,
+    "number": 673,
+    "title": "673. Number of Longest Increasing Subsequence",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/number-of-longest-increasing-subsequence/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 177,
+    "number": 128,
+    "title": "128. Longest Consecutive Sequence",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/longest-consecutive-sequence/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 178,
+    "number": 2337,
+    "title": "2337. Move Pieces to Obtain a String",
+    "difficulty": "medium",
+    "tags": [
+      "Two Pointers",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/move-pieces-to-obtain-a-string/",
+    "topic": "String: Two-Pointer"
+  },
+  {
+    "sNo": 179,
+    "number": 2435,
+    "title": "2435. Paths in Matrix Whose Sum Is Divisible by K",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/paths-in-matrix-whose-sum-is-divisible-by-k/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 180,
+    "number": 45,
+    "title": "45. Jump Game II",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/jump-game-ii/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 181,
+    "number": 55,
+    "title": "55. Jump Game",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/jump-game/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 182,
+    "number": 81,
+    "title": "81. Search in Rotated Sorted Array II",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/search-in-rotated-sorted-array-ii/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 183,
+    "number": 153,
+    "title": "153. Find Minimum in Rotated Sorted Array",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 184,
+    "number": 392,
+    "title": "392. Is Subsequence",
+    "difficulty": "easy",
+    "tags": [
+      "Two Pointers",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/is-subsequence/",
+    "topic": "String: Two-Pointer"
+  },
+  {
+    "sNo": 185,
+    "number": 2825,
+    "title": "2825. Make String a Subsequence Using Cyclic Increments",
+    "difficulty": "medium",
+    "tags": [
+      "Two Pointers",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/make-string-a-subsequence-using-cyclic-increments/",
+    "topic": "String: Two-Pointer"
+  },
+  {
+    "sNo": 186,
+    "number": 33,
+    "title": "33. Search in Rotated Sorted Array",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 187,
+    "number": 2304,
+    "title": "2304. Minimum Path Cost in a Grid",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-path-cost-in-a-grid/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 188,
+    "number": 80,
+    "title": "80. Remove Duplicates from Sorted Array II",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Two Pointers"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/",
+    "topic": "Array: Two-Pointer"
+  },
+  {
+    "sNo": 189,
+    "number": 74,
+    "title": "74. Search a 2D Matrix",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/search-a-2d-matrix/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 190,
+    "number": 2109,
+    "title": "2109. Adding Spaces to a String",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Two Pointers"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/adding-spaces-to-a-string/",
+    "topic": "Array: Two-Pointer"
+  },
+  {
+    "sNo": 191,
+    "number": 1455,
+    "title": "1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence",
+    "difficulty": "easy",
+    "tags": [
+      "Two Pointers",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/",
+    "topic": "String: Two-Pointer"
+  },
+  {
+    "sNo": 192,
+    "number": 72,
+    "title": "72. Edit Distance",
+    "difficulty": "medium",
+    "tags": [
+      "String",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/edit-distance/",
+    "topic": "Dynamic Programming: DP on Strings"
+  },
+  {
+    "sNo": 193,
+    "number": 64,
+    "title": "64. Minimum Path Sum",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-path-sum/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 194,
+    "number": 63,
+    "title": "63. Unique Paths II",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/unique-paths-ii/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 195,
+    "number": 62,
+    "title": "62. Unique Paths",
+    "difficulty": "medium",
+    "tags": [
+      "Math",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/unique-paths/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 196,
+    "number": 3319,
+    "title": "3319. K-th Largest Perfect Subtree Size in Binary Tree",
+    "difficulty": "medium",
+    "tags": [
+      "Tree",
+      "DFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-largest-perfect-subtree-size-in-binary-tree/",
+    "topic": "Tree: Tree DP & DFS"
+  },
+  {
+    "sNo": 197,
+    "number": 216,
+    "title": "216. Combination Sum III",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Backtracking"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/combination-sum-iii/",
+    "topic": "Backtracking: Recursion & Backtracking"
+  },
+  {
+    "sNo": 198,
+    "number": 40,
+    "title": "40. Combination Sum II",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Backtracking"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/combination-sum-ii/",
+    "topic": "Backtracking: Recursion & Backtracking"
+  },
+  {
+    "sNo": 199,
+    "number": 39,
+    "title": "39. Combination Sum",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Backtracking"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/combination-sum/",
+    "topic": "Backtracking: Recursion & Backtracking"
+  },
+  {
+    "sNo": 200,
+    "number": 16,
+    "title": "16. 3Sum Closest",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Two Pointers"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/3sum-closest/",
+    "topic": "Array: Two-Pointer"
+  },
+  {
+    "sNo": 201,
+    "number": 7,
+    "title": "7. Reverse Integer",
+    "difficulty": "medium",
+    "tags": [
+      "Math"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/reverse-integer/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 202,
+    "number": 1346,
+    "title": "1346. Check If N and Its Double Exist",
+    "difficulty": "easy",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/check-if-n-and-its-double-exist/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 203,
+    "number": 2097,
+    "title": "2097. Valid Arrangement of Pairs",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "DFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/valid-arrangement-of-pairs/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 204,
+    "number": 919,
+    "title": "919. Complete Binary Tree Inserter",
+    "difficulty": "medium",
+    "tags": [
+      "Tree",
+      "BFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/complete-binary-tree-inserter/",
+    "topic": "Tree: Trees & Traversals"
+  },
+  {
+    "sNo": 205,
+    "number": 124,
+    "title": "124. Binary Tree Maximum Path Sum",
+    "difficulty": "hard",
+    "tags": [
+      "DP",
+      "Tree"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+    "topic": "Tree: Tree DP & DFS"
+  },
+  {
+    "sNo": 206,
+    "number": 2641,
+    "title": "2641. Cousins in Binary Tree II",
+    "difficulty": "medium",
+    "tags": [
+      "Hash Table",
+      "Tree"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/cousins-in-binary-tree-ii/",
+    "topic": "Tree: Trees & Traversals"
+  },
+  {
+    "sNo": 207,
+    "number": 102,
+    "title": "102. Binary Tree Level Order Traversal",
+    "difficulty": "medium",
+    "tags": [
+      "Tree",
+      "BFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+    "topic": "Tree: Trees & Traversals"
+  },
+  {
+    "sNo": 208,
+    "number": 993,
+    "title": "993. Cousins in Binary Tree",
+    "difficulty": "easy",
+    "tags": [
+      "Tree",
+      "DFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/cousins-in-binary-tree/",
+    "topic": "Tree: Tree DP & DFS"
+  },
+  {
+    "sNo": 209,
+    "number": 514,
+    "title": "514. Freedom Trail",
+    "difficulty": "hard",
+    "tags": [
+      "String",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/freedom-trail/",
+    "topic": "Dynamic Programming: DP on Strings"
+  },
+  {
+    "sNo": 210,
+    "number": 968,
+    "title": "968. Binary Tree Cameras",
+    "difficulty": "hard",
+    "tags": [
+      "DP",
+      "Tree"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/binary-tree-cameras/",
+    "topic": "Tree: Tree DP & DFS"
+  },
+  {
+    "sNo": 211,
+    "number": 493,
+    "title": "493. Reverse Pairs",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/reverse-pairs/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 212,
+    "number": 858,
+    "title": "858. Mirror Reflection",
+    "difficulty": "medium",
+    "tags": [
+      "Math",
+      "Geometry"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/mirror-reflection/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 213,
+    "number": 440,
+    "title": "440. K-th Smallest in Lexicographical Order",
+    "difficulty": "hard",
+    "tags": [
+      "Trie"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-smallest-in-lexicographical-order/",
+    "topic": "Array: Simulation & General"
+  },
+  {
+    "sNo": 214,
+    "number": 1785,
+    "title": "1785. Minimum Elements to Add to Form a Given Sum",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Greedy"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-elements-to-add-to-form-a-given-sum/",
+    "topic": "Greedy: Greedy Algorithms"
+  },
+  {
+    "sNo": 215,
+    "number": 517,
+    "title": "517. Super Washing Machines",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Greedy"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/super-washing-machines/",
+    "topic": "Greedy: Greedy Algorithms"
+  },
+  {
+    "sNo": 216,
+    "number": 410,
+    "title": "410. Split Array Largest Sum",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/split-array-largest-sum/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 217,
+    "number": 479,
+    "title": "479. Largest Palindrome Product",
+    "difficulty": "hard",
+    "tags": [
+      "Math",
+      "Enumeration"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/largest-palindrome-product/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 218,
+    "number": 403,
+    "title": "403. Frog Jump",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/frog-jump/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 219,
+    "number": 301,
+    "title": "301. Remove Invalid Parentheses",
+    "difficulty": "hard",
+    "tags": [
+      "String",
+      "Backtracking"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/remove-invalid-parentheses/",
+    "topic": "Backtracking: Recursion & Backtracking"
+  },
+  {
+    "sNo": 220,
+    "number": 329,
+    "title": "329. Longest Increasing Path in a Matrix",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 221,
+    "number": 315,
+    "title": "315. Count of Smaller Numbers After Self",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-smaller-numbers-after-self/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 222,
+    "number": 327,
+    "title": "327. Count of Range Sum",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-range-sum/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 223,
+    "number": 330,
+    "title": "330. Patching Array",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Greedy"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/patching-array/",
+    "topic": "Greedy: Greedy Algorithms"
+  },
+  {
+    "sNo": 224,
+    "number": 363,
+    "title": "363. Max Sum of Rectangle No Larger Than K",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/",
+    "topic": "Binary Search: Binary Search"
+  },
+  {
+    "sNo": 225,
+    "number": 335,
+    "title": "335. Self Crossing",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Math"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/self-crossing/",
+    "topic": "Math: Mathematical & Number Theory"
+  },
+  {
+    "sNo": 226,
+    "number": 460,
+    "title": "460. LFU Cache",
+    "difficulty": "hard",
+    "tags": [
+      "Hash Table",
+      "Linked List"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/lfu-cache/",
+    "topic": "Linked List: Linked List Operations"
+  },
+  {
+    "sNo": 227,
+    "number": 2516,
+    "title": "2516. Take K of Each Character From Left and Right",
+    "difficulty": "medium",
+    "tags": [
+      "Hash Table",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/take-k-of-each-character-from-left-and-right/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 228,
+    "number": 480,
+    "title": "480. Sliding Window Median",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/sliding-window-median/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 229,
+    "number": 502,
+    "title": "502. IPO",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Greedy"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/ipo/",
+    "topic": "Greedy: Greedy Algorithms"
+  },
+  {
+    "sNo": 230,
+    "number": 552,
+    "title": "552. Student Attendance Record II",
+    "difficulty": "hard",
+    "tags": [
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/student-attendance-record-ii/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 231,
+    "number": 546,
+    "title": "546. Remove Boxes",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/remove-boxes/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 232,
+    "number": 233,
+    "title": "233. Number of Digit One",
+    "difficulty": "hard",
+    "tags": [
+      "Math",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/number-of-digit-one/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 233,
+    "number": 312,
+    "title": "312. Burst Balloons",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/burst-balloons/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 234,
+    "number": 239,
+    "title": "239. Sliding Window Maximum",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Queue"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/sliding-window-maximum/",
+    "topic": "Stack & Queue: Stack & Queue Patterns"
+  },
+  {
+    "sNo": 235,
+    "number": 188,
+    "title": "188. Best Time to Buy and Sell Stock IV",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 236,
+    "number": 123,
+    "title": "123. Best Time to Buy and Sell Stock III",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 237,
+    "number": 1652,
+    "title": "1652. Defuse the Bomb",
+    "difficulty": "easy",
+    "tags": [
+      "Array",
+      "Sliding Window"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/defuse-the-bomb/",
+    "topic": "Array: Sliding Window"
+  },
+  {
+    "sNo": 238,
+    "number": 10,
+    "title": "10. Regular Expression Matching",
+    "difficulty": "hard",
+    "tags": [
+      "String",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/regular-expression-matching/",
+    "topic": "Dynamic Programming: DP on Strings"
+  },
+  {
+    "sNo": 239,
+    "number": 25,
+    "title": "25. Reverse Nodes in k-Group",
+    "difficulty": "hard",
+    "tags": [
+      "Linked List",
+      "Recursion"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/reverse-nodes-in-k-group/",
+    "topic": "Linked List: Linked List Operations"
+  },
+  {
+    "sNo": 240,
+    "number": 3254,
+    "title": "3254. Find the Power of K-Size Subarrays I",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Sliding Window"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/find-the-power-of-k-size-subarrays-i/",
+    "topic": "Array: Sliding Window"
+  },
+  {
+    "sNo": 241,
+    "number": 32,
+    "title": "32. Longest Valid Parentheses",
+    "difficulty": "hard",
+    "tags": [
+      "String",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/longest-valid-parentheses/",
+    "topic": "Dynamic Programming: DP on Strings"
+  },
+  {
+    "sNo": 242,
+    "number": 30,
+    "title": "30. Substring with Concatenation of All Words",
+    "difficulty": "hard",
+    "tags": [
+      "Hash Table",
+      "String"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/substring-with-concatenation-of-all-words/",
+    "topic": "Hash Table: Frequency Map & Hashing"
+  },
+  {
+    "sNo": 243,
+    "number": 84,
+    "title": "84. Largest Rectangle in Histogram",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Stack"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+    "topic": "Stack & Queue: Stack & Queue Patterns"
+  },
+  {
+    "sNo": 244,
+    "number": 85,
+    "title": "85. Maximal Rectangle",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "DP"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-rectangle/",
+    "topic": "Dynamic Programming: Classic DP"
+  },
+  {
+    "sNo": 245,
+    "number": 218,
+    "title": "218. The Skyline Problem",
+    "difficulty": "hard",
+    "tags": [
+      "Array",
+      "Divide & Conquer"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/the-skyline-problem/",
+    "topic": "Array: Simulation & General"
+  },
+  {
+    "sNo": 246,
+    "number": 1574,
+    "title": "1574. Shortest Subarray to be Removed to Make Array Sorted",
+    "difficulty": "medium",
+    "tags": [
+      "Array",
+      "Two Pointers"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/",
+    "topic": "Array: Two-Pointer"
+  },
+  {
+    "sNo": 247,
+    "number": 787,
+    "title": "787. Cheapest Flights Within K Stops",
+    "difficulty": "medium",
+    "tags": [
+      "DP",
+      "DFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
+    "topic": "Graph: Graph DP"
+  },
+  {
+    "sNo": 248,
+    "number": 785,
+    "title": "785. Is Graph Bipartite?",
+    "difficulty": "medium",
+    "tags": [
+      "DFS",
+      "BFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/is-graph-bipartite/",
+    "topic": "Graph: DFS & BFS"
+  },
+  {
+    "sNo": 249,
+    "number": 623,
+    "title": "623. Add One Row to Tree",
+    "difficulty": "medium",
+    "tags": [
+      "Tree",
+      "DFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/add-one-row-to-tree/",
+    "topic": "Tree: Tree DP & DFS"
+  },
+  {
+    "sNo": 250,
+    "number": 515,
+    "title": "515. Find Largest Value in Each Tree Row",
+    "difficulty": "medium",
+    "tags": [
+      "Tree",
+      "DFS"
+    ],
+    "leetcodeUrl": "https://leetcode.com/problems/find-largest-value-in-each-tree-row/",
+    "topic": "Tree: Tree DP & DFS"
+  }
+]
