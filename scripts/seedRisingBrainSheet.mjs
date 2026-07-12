@@ -19,7 +19,7 @@ async function main() {
 
   const seedClient = createClient(env.supabaseUrl, env.supabaseServiceRoleKey, supabaseOptions);
 
-  const sheetName = 'Rising Brain Sheet';
+  const sheetName = 'Quest Sheet';
   const sheetDescription = 'Comprehensive DSA problem sheet for interview preparation';
 
   // 1. Create or get the Rising Brain Sheet

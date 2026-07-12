@@ -24,7 +24,7 @@ async function main() {
 
   const seedClient = createClient(env.supabaseUrl, env.supabaseServiceRoleKey, supabaseOptions);
 
-  const sheetName = 'Google';
+  const sheetName = 'Google Sheet';
   const sheetDescription = 'Curated pattern-wise Google coding interview questions.';
 
   // 1. Create or get the Google Sheet

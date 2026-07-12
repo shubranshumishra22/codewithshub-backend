@@ -74,7 +74,7 @@ async function main() {
 
   const seedClient = createClient(env.supabaseUrl, env.supabaseServiceRoleKey, supabaseOptions);
 
-  const sheetName = 'LeetCode Top Interview Questions';
+  const sheetName = 'Interview Questions';
   const sheetDescription = 'The complete 150 popular and frequently asked coding questions in technical interviews on LeetCode.';
 
   // 1. Create or get Leetcode sheet

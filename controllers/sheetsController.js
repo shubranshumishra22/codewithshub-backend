@@ -46,12 +46,31 @@ const catalogClient = () => supabaseAdmin || supabase;
 export const getSheets = async (_req, res) => {
   const { data, error } = await catalogClient()
     .from('sheets')
-    .select('id, name, description, created_at')
-    .order('created_at', { ascending: true });
+    .select('id, name, description, created_at');
 
   throwIfSupabaseError(error);
 
-  res.status(200).json({ sheets: data });
+  const filtered = (data || []).filter((s) => s.name !== 'Striver A-Z');
+
+  const orderMap = {
+    'Quest Sheet': 1,
+    'Rising Brain Sheet': 1,
+    'Google Sheet': 2,
+    'Google': 2,
+    'Interview Questions': 3,
+    'Leetcode Top Interview': 3,
+    'Leetcode Top 150': 3,
+    'Neetcode 150': 4,
+    'AI/ML': 5,
+  };
+
+  const sorted = filtered.sort((a, b) => {
+    const orderA = orderMap[a.name] ?? 99;
+    const orderB = orderMap[b.name] ?? 99;
+    return orderA - orderB;
+  });
+
+  res.status(200).json({ sheets: sorted });
 };
 
 export const getTopicsWithQuestions = async (req, res) => {
