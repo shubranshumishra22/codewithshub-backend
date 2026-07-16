@@ -40,14 +40,25 @@ export const getProgressBySheet = async (req, res) => {
   let progressRows = [];
 
   if (questionIds.length > 0) {
-    const { data, error } = await req.supabase
-      .from('user_progress')
-      .select('id, question_id, is_solved, solved_at, notes')
-      .eq('user_id', req.user.id)
-      .in('question_id', questionIds);
+    const CHUNK_SIZE = 150;
+    const chunks = [];
+    for (let i = 0; i < questionIds.length; i += CHUNK_SIZE) {
+      chunks.push(questionIds.slice(i, i + CHUNK_SIZE));
+    }
 
-    throwIfSupabaseError(error);
-    progressRows = data;
+    const queries = chunks.map(async (chunk) => {
+      const { data, error } = await req.supabase
+        .from('user_progress')
+        .select('id, question_id, is_solved, solved_at, notes')
+        .eq('user_id', req.user.id)
+        .in('question_id', chunk);
+
+      throwIfSupabaseError(error);
+      return data || [];
+    });
+
+    const results = await Promise.all(queries);
+    progressRows = results.flat();
   }
 
   const progressByQuestion = progressRows.reduce((acc, progress) => {

@@ -5,6 +5,7 @@ import { supabase, supabaseAdmin } from '../config/supabase.js';
 import { notFoundError } from '../utils/httpError.js';
 import { throwIfSupabaseError } from '../utils/supabaseError.js';
 import { generateSolutionDetails } from '../utils/solutionGenerator.js';
+import { syncCompany } from '../services/githubSync.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -50,7 +51,9 @@ export const getSheets = async (_req, res) => {
 
   throwIfSupabaseError(error);
 
-  const filtered = (data || []).filter((s) => s.name !== 'Striver A-Z');
+  const filtered = (data || []).filter(
+    (s) => s.name !== 'Striver A-Z' && !s.description?.startsWith('Company sheet:')
+  );
 
   const orderMap = {
     'Quest Sheet': 1,
@@ -71,6 +74,37 @@ export const getSheets = async (_req, res) => {
   });
 
   res.status(200).json({ sheets: sorted });
+};
+
+const fetchQuestionsByTopicIds = async (client, topicIds) => {
+  if (!topicIds || topicIds.length === 0) return [];
+  
+  let allQuestions = [];
+  let page = 0;
+  const pageSize = 1000;
+  
+  while (true) {
+    const start = page * pageSize;
+    const end = start + pageSize - 1;
+    
+    const { data, error } = await client
+      .from('questions')
+      .select('id, topic_id, title, difficulty, leetcode_url, video_url, created_at, order_index')
+      .in('topic_id', topicIds)
+      .order('order_index', { ascending: true })
+      .range(start, end);
+      
+    throwIfSupabaseError(error);
+    
+    allQuestions = allQuestions.concat(data || []);
+    
+    if (!data || data.length < pageSize) {
+      break;
+    }
+    page++;
+  }
+  
+  return allQuestions;
 };
 
 export const getTopicsWithQuestions = async (req, res) => {
@@ -98,18 +132,7 @@ export const getTopicsWithQuestions = async (req, res) => {
   throwIfSupabaseError(topicsError);
 
   const topicIds = topics.map((topic) => topic.id);
-  let questions = [];
-
-  if (topicIds.length > 0) {
-    const { data, error } = await client
-      .from('questions')
-      .select('id, topic_id, title, difficulty, leetcode_url, video_url, created_at, order_index')
-      .in('topic_id', topicIds)
-      .order('order_index', { ascending: true });
-
-    throwIfSupabaseError(error);
-    questions = data;
-  }
+  const questions = await fetchQuestionsByTopicIds(client, topicIds);
 
   const questionsByTopic = questions.reduce((acc, question) => {
     acc[question.topic_id] ||= [];
@@ -170,4 +193,93 @@ export const getQuestionBySlug = async (req, res) => {
     details: solutionDetails,
   });
 };
+
+export const getCompanySheets = async (_req, res) => {
+  const client = catalogClient();
+  const { data, error } = await client
+    .from('sheets')
+    .select('id, name, description, created_at');
+
+  throwIfSupabaseError(error);
+
+  const companySheets = (data || []).filter(
+    (s) => s.description?.startsWith('Company sheet:')
+  );
+
+  res.status(200).json({ sheets: companySheets });
+};
+
+export const getCompanySheetDetails = async (req, res) => {
+  const { companyName } = req.params;
+  const client = catalogClient();
+
+  // Find the sheet
+  let { data: sheet, error: sheetError } = await client
+    .from('sheets')
+    .select('id, name, description')
+    .eq('name', companyName)
+    .maybeSingle();
+
+  throwIfSupabaseError(sheetError);
+
+  // If the sheet doesn't exist or doesn't have the Company tag, trigger sync first
+  if (!sheet || !sheet.description?.startsWith('Company sheet:')) {
+    console.log(`[getCompanySheetDetails] Company ${companyName} not found or untagged. Initializing sync...`);
+    try {
+      await syncCompany(companyName);
+      // Re-fetch
+      const { data: newSheet, error: newSheetError } = await client
+        .from('sheets')
+        .select('id, name, description')
+        .eq('name', companyName)
+        .single();
+      throwIfSupabaseError(newSheetError);
+      sheet = newSheet;
+    } catch (err) {
+      console.error(`[getCompanySheetDetails] Failed to initialize sync for ${companyName}:`, err);
+      return res.status(500).json({ error: `Failed to fetch data for ${companyName} from GitHub.` });
+    }
+  }
+
+  // Now fetch topics and questions
+  const { data: topics, error: topicsError } = await client
+    .from('topics')
+    .select('id, sheet_id, name, order_index')
+    .eq('sheet_id', sheet.id)
+    .order('order_index', { ascending: true });
+
+  throwIfSupabaseError(topicsError);
+
+  const topicIds = topics.map((topic) => topic.id);
+  const questions = await fetchQuestionsByTopicIds(client, topicIds);
+
+  const questionsByTopic = questions.reduce((acc, question) => {
+    acc[question.topic_id] ||= [];
+    acc[question.topic_id].push(question);
+    return acc;
+  }, {});
+
+  res.status(200).json({
+    sheet,
+    topics: topics.map((topic) => ({
+      ...topic,
+      questions: questionsByTopic[topic.id] || [],
+    })),
+  });
+};
+
+export const syncCompanySheetDetails = async (req, res) => {
+  const { companyName } = req.params;
+  try {
+    const result = await syncCompany(companyName);
+    res.status(200).json({
+      message: `Successfully synced ${companyName} from GitHub.`,
+      ...result
+    });
+  } catch (err) {
+    console.error(`[syncCompanySheetDetails] Sync failed for ${companyName}:`, err);
+    res.status(500).json({ error: `Sync failed: ${err.message}` });
+  }
+};
+
 
